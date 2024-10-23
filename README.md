@@ -1,6 +1,7 @@
 Petit tester pour pipex, très simple.
 
 Tests :
+- norminette
 - " " "ls -l"
 - "" "ls -l"
 - "cat" "grep Now"
