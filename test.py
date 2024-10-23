@@ -38,6 +38,19 @@ commands_to_test = [
 	["/bin/cat", "cat"],
 	["cat", "/bin/cat"],
 	["/bin/cat", "/bin/cat"],
+	["ls -l", "wc -l"],
+	["grep a1", "wc -w"],
+	["notexisting", "ls -l"],
+	["ls -la", "notexisting"],
+	["/bin/ls", "bin/notexisting"],
+	["               cat              ", "                 wc                -l"],
+	["ls -la --color=always --group-directories-first --time-style=full-iso", "grep .txt"],
+	["ls -l /root", "wc -l"],
+	["grep", "wc"],
+	["true", "false"],
+	["cat /dev/null", "cat"],
+	["cat", "od -c"],
+	["yes", "head -n 10"],
 ]
 
 infile = "infile.txt"
@@ -55,6 +68,7 @@ def check_pipex_exists():
 def execute_pipex(infile, command1, command2, my_outfile, env):
 	try:
 		command = f"../pipex {infile} '{command1}' '{command2}' {my_outfile}"
+		#print(f"{command}")
 		result = subprocess.run(command, shell=True, capture_output=True, text=True, env=env)
 		return result.stdout, result.stderr, result.returncode
 	except Exception as e:
@@ -63,17 +77,11 @@ def execute_pipex(infile, command1, command2, my_outfile, env):
 def execute_shell(infile, command1, command2, real_outfile, env):
 	try:
 		command = f"< {infile} {command1} | {command2} > {real_outfile}"
+		#print(f"{command}")
 		result = subprocess.run(command, shell=True, stderr=subprocess.DEVNULL, env=env)
 		return result.returncode
 	except Exception as e:
 		return -1
-
-def compare_files(file1, file2):
-	try:
-		with open(file1, 'r') as f1, open(file2, 'r') as f2:
-			return f1.read() == f2.read()
-	except Exception as e:
-		return False
 
 def compare_files(file1, file2):
 	try:
@@ -85,14 +93,13 @@ def compare_files(file1, file2):
 					or "real_outfile.txt" in line1 or "real_outfile.txt" in line2):
 					continue
 				if line1 != line2:
+					#print(f"my__ : {line1}")
+					#print(f"real : {line2}")
 					return False
 			return True
 	except Exception as e:
+		print_colored("Impossible d'ouvrir les fichiers !", f"{BOLD};{RED}")
 		return False
-
-def clear_file(file_path):
-	with open(file_path, 'w') as f:
-		f.write("")
 
 def norminette():
 	result = subprocess.run("norminette ..", shell=True, capture_output=True, text=True)
@@ -114,7 +121,7 @@ def run_test():
 	ko_counter = 0
 	seg_counter = 0
 	for env in env_to_test:
-		print_colored(f"Test avec l'environnement : {env}", 36)
+		print_colored(f"Test avec l'environnement : {env}", CYAN)
 		for commands in commands_to_test:
 			command1 = commands[0]
 			command2 = commands[1]
@@ -133,7 +140,6 @@ def run_test():
 			else:
 				print_colored(f"KO\n", f"{BOLD};{RED}")
 				ko_counter += 1
-			time.sleep(0.5)
 	if ok_counter > 0:
 		print(f"\033[1m\033[32mOK\033[0m : {ok_counter}")
 	if ko_counter > 0:
@@ -143,5 +149,5 @@ def run_test():
 
 check_pipex_exists()
 norminette()
-time.sleep(2)
+time.sleep(1)
 run_test()
