@@ -10,7 +10,7 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="install">Installation</a></li>
+    <li><a href="#install">Installation</a></li>
     <li><a href="#getting-started">Important note</a></li>
     <li><a href="#usage">List of the infiles</a></li>
     <li><a href="#roadmap">List of the environment tested</a></li>
