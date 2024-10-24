@@ -1,4 +1,4 @@
-Little tester for pipex.
+<h1>Little tester for pipex.</h1>
 
 Check the norm, the compilation and different commands.
 Also check the program's error messages. If they're in stdout and the tests work, an OK will be written in yellow.
