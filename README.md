@@ -3,6 +3,8 @@ Little tester for pipex.
 Check the norm, the compilation and different commands.
 Also check the program's error messages. If they're in stdout and the tests work, an OK will be written in yellow.
 
+DOES NOT CHECK THE LEAKS !
+
 List of the infiles :
 
 - infile.txt
