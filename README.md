@@ -18,7 +18,7 @@
   </ol>
 </details>
 
-<h2 id=install> Installation</h2>
+<h2 id="install"> Installation</h2>
 
 1. Clone the repo
    ```sh
