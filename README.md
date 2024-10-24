@@ -11,10 +11,10 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#install">Installation</a></li>
-    <li><a href="#getting-started">Important note</a></li>
-    <li><a href="#usage">List of the infiles</a></li>
-    <li><a href="#roadmap">List of the environment tested</a></li>
-    <li><a href="#contributing">List of the commands tested</a></li>
+    <li><a href="#note">Important note</a></li>
+    <li><a href="#infiles">List of the infiles</a></li>
+    <li><a href="#env">List of the environment tested</a></li>
+    <li><a href="#commands">List of the commands tested</a></li>
   </ol>
 </details>
 
@@ -33,7 +33,7 @@
    python3 test.py
    ```
 
-## Important note ⚠️
+<h2 id="note"> Important note ⚠️</h2>
 
 <p>This tester is provided to help you avoid redundancy when writing tests every time you modify the Pipex project.</p>
 <p>However, it is crucial to create and validate your own specific tests to ensure full coverage of your code.</p>
@@ -42,7 +42,7 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## List of the infiles :
+<h2 id="infiles"> List of the infiles :</h2>
 
 <ul>
   <p><li>infile.txt</li></p>
@@ -55,7 +55,7 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## List of the environment tested :
+<h2 id="env"> List of the environment tested :</h2>
 <ul>
   <p><li>Default</li></p>
   <p><li>None</li></p>
@@ -65,7 +65,7 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## List of the commands tested :
+<h2 id="commands"> List of the commands tested :</h2>
 <ul>
   <p><li>" " | ls -l</li></p>
   <p><li>"" | ls -l</li></p>
