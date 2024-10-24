@@ -34,8 +34,8 @@
 ## List of the infiles :
 
 <ul>
-  <li>infile.txt</li>
-  <li>non existant file</li>
+  <p><li>infile.txt</li></p>
+  <p><li>non existant file</li></p>
   <li>/dev/null</li>
   <p>- which does not contain any information</p>
   <li>file_without_perm</li>
@@ -46,48 +46,48 @@
 
 ## List of the environment tested :
 <ul>
-  <li>Default</li>
-  <li>None</li>
-  <li>PATH': ''</li>
-  <li>PATH': '/bin:/usr/bin'</li>
+  <p><li>Default</li></p>
+  <p><li>None</li></p>
+  <p><li>PATH': ''</li></p>
+  <p><li>PATH': '/bin:/usr/bin'</li></p>
 </ul>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## List of the commands tested :
 <ul>
-  <li>" ", "ls -l"</li>
-  <li>"", "ls -l"</li>
-  <li>"cat", "grep Now"</li>
-  <li>"cat", "wc -l"</li>
-  <li>"cat", "ls"</li>
-  <li>"echo Hello", "cat"</li>
-  <li>"", "</li>
-  <li>" ", " "</li>
-  <li>"", " "</li>
-  <li>" ", ""</li>
-  <li>"", "ls"</li>
-  <li>" ", "ls"</li>
-  <li>"cat", "head -1"</li>
-  <li>" cat", "     head -1   "</li>
-  <li>" ", "notexisting"</li>
-  <li>"cat", "cat"</li>
-  <li>"/bin/cat", "cat"</li>
-  <li>"cat", "/bin/cat"</li>
-  <li>"/bin/cat", "/bin/cat"</li>
-  <li>"ls -l", "wc -l"</li>
-  <li>"grep a1", "wc -w"</li>
-  <li>"notexisting", "ls -l"</li>
-  <li>"ls -la", "notexisting"</li>
-  <li>"/bin/ls", "bin/notexisting"</li>
-  <li>"ls -l /root", "wc -l"</li>
-  <li>"grep", "wc"</li>
-  <li>"true", "false"</li>
-  <li>"cat /dev/null", "cat"</li>
-  <li>"cat", "od -c"</li>
-  <li>"yes", "head -n 10"</li>
-  <li>"               cat              ", "                 wc                -l"</li>
-  <li>"ls -la --color=always --group-directories-first --time-style=full-iso", "grep .txt"</li>
+  <p><li>" " | ls -l</li></p>
+  <p><li>"" | ls -l</li></p>
+  <p><li>cat | grep Now</li></p>
+  <p><li>cat | wc -l</li></p>
+  <p><li>cat | ls</li></p>
+  <p><li>echo Hello | cat</li></p>
+  <p><li>"" | ""</li></p>
+  <p><li>" " | " "</li></p>
+  <p><li>"" | " "</li></p>
+  <p><li>" " | ""</li></p>
+  <p><li>"" | ls</li></p>
+  <p><li>" " | ls</li></p>
+  <p><li>cat | head -1</li></p>
+  <p><li>" cat" | "     head -1   "</li></p>
+  <p><li>" " | notexisting</li></p>
+  <p><li>cat | cat</li></p>
+  <p><li>/bin/cat | cat</li></p>
+  <p><li>cat | /bin/cat</li></p>
+  <p><li>/bin/cat | /bin/cat</li></p>
+  <p><li>ls -l | wc -l</li></p>
+  <p><li>grep a1 | wc -w</li></p>
+  <p><li>notexisting | ls -l</li></p>
+  <p><li>ls -la | notexisting</li></p>
+  <p><li>/bin/ls | bin/notexisting</li></p>
+  <p><li>ls -l /root | wc -l</li></p>
+  <p><li>grep | wc</li></p>
+  <p><li>true | false</li></p>
+  <p><li>cat /dev/null | cat</li></p>
+  <p><li>cat | od -c</li></p>
+  <p><li>yes | head -n 10</li></p>
+  <p><li>"               cat              " | "                 wc                -l"</li></p>
+  <p><li>ls -la --color=always --group-directories-first --time-style=full-iso | grep .txt</li></p>
 </ul>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
