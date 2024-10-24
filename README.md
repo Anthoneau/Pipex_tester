@@ -48,8 +48,8 @@
 <ul>
   <p><li>Default</li></p>
   <p><li>None</li></p>
-  <p><li>PATH': ''</li></p>
-  <p><li>PATH': '/bin:/usr/bin'</li></p>
+  <p><li>PATH: ""</li></p>
+  <p><li>PATH: /bin:/usr/bin</li></p>
 </ul>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
