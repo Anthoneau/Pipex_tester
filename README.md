@@ -1,6 +1,6 @@
 <a id="readme-top"></a>
 
-<h1>Little tester for pipex.</h1>
+# Little tester for pipex.
 
 <p>Check the norm, the compilation and different commands.</p>
 <p>Also check the program's error messages. If they're in stdout and the tests work, an OK will be written in yellow.</p>
@@ -22,7 +22,16 @@
    python3 test.py
    ```
 
-<h2>List of the infiles :</h2>
+## Important note ⚠️
+
+<p>This tester is provided to help you avoid redundancy when writing tests every time you modify the Pipex project.</p>
+<p>However, it is crucial to create and validate your own specific tests to ensure full coverage of your code.</p>
+<p>This tester is a support tool and does not replace the personal consideration required to design appropriate test cases for your project.</p>
+<p>Be sure to adapt your tests according to your specific needs.</p>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## List of the infiles :
 
 <ul>
   <li>infile.txt</li>
@@ -33,7 +42,9 @@
   <p>- which is a created file from the program with 0 permission</p>
 </ul>
 
-<h2>List of the environment tested :</h2>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## List of the environment tested :
 <ul>
   <li>Default</li>
   <li>None</li>
@@ -41,7 +52,9 @@
   <li>PATH': '/bin:/usr/bin'</li>
 </ul>
 
-<h2>List of the commands tested :</h2>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## List of the commands tested :
 <ul>
   <li>" ", "ls -l"</li>
   <li>"", "ls -l"</li>
@@ -76,4 +89,5 @@
   <li>"               cat              ", "                 wc                -l"</li>
   <li>"ls -la --color=always --group-directories-first --time-style=full-iso", "grep .txt"</li>
 </ul>
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
